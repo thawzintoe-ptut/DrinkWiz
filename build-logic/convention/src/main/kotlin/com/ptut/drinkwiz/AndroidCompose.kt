@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION", "UnstableApiUsage")
+
 package com.ptut.drinkwiz
 
 import com.android.build.api.dsl.CommonExtension

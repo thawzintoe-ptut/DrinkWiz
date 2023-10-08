@@ -2,6 +2,10 @@ plugins {
     alias(libs.plugins.androidApplication) apply false
     alias(libs.plugins.kotlinAndroid) apply false
     alias(libs.plugins.org.jetbrains.kotlin.jvm) apply false
+    alias(libs.plugins.drinkwiz.android.test) apply false
+    alias(libs.plugins.drinkwiz.android.library) apply false
+    alias(libs.plugins.drinkwiz.compose) apply false
+    alias(libs.plugins.kotlin.serialization) apply false
 }
 
 buildscript {

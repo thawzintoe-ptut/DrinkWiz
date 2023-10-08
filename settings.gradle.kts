@@ -16,3 +16,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "DrinkWiz"
 include(":app")
+include(":core")
+include(":core:util")
+include(":core:ui")
+include(":core:network")

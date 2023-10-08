@@ -14,7 +14,6 @@ class AndroidTestConventionPlugin : Plugin<Project> {
             with(pluginManager) {
                 apply("com.android.test")
                 apply("org.jetbrains.kotlin.android")
-                apply("org.jetbrains.kotlin.kapt")
             }
 
             extensions.configure<TestExtension> {
@@ -24,10 +23,8 @@ class AndroidTestConventionPlugin : Plugin<Project> {
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             dependencies {
                 add("implementation", libs.findLibrary("androidx.test.core").get())
+                add("implementation", libs.findLibrary("androidx.test.ext.junit").get())
                 add("implementation", libs.findLibrary("androidx.compose.ui.test.junit4").get())
-                add("implementation", libs.findLibrary("hilt.android").get())
-                add("implementation", libs.findLibrary("hilt.android.testing").get())
-                add("kapt", libs.findLibrary("hilt.compiler").get())
             }
 
             val kaptExtension = extensions.getByType<KaptExtension>()

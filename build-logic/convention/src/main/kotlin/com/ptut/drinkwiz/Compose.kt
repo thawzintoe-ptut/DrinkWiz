@@ -23,9 +23,8 @@ internal fun Project.configureCompose(commonExtension: BaseExtension) {
         }
 
         dependencies {
-            add("implementation", platform(libs.findLibrary("androidx.compose.bom").get()))
-            add("androidTestImplementation", libs.findLibrary("androidx.compose.ui.test.junit4").get())
-            add("androidTestImplementation", project(":core:testing"))
+            add("implementation", platform(libs.findLibrary("compose.bom").get()))
+//            add("androidTestImplementation", project(":core:testing"))
         }
     }
 }
